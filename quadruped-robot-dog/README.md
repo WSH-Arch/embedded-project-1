@@ -78,6 +78,15 @@ void move4(void);
 ```
 
 主流程：初始化 → `Servo_Init()` 启动 4 路 PWM → 依次执行 `move1~move4` → 进入主循环，检测按键（PA12）触发动作。
+## 代码导航
+
+| 目录 / 文件 | 来源 | 说明 |
+|---|---|---|
+| `Core/Src/Servo.c`、`Core/Inc/Servo.h` | **本人编写** | 角度→脉宽换算、4 路 PWM 启动 |
+| `Core/Src/main.c` | **本人编写**（部分） | `move1~move4` 动作序列、按键触发逻辑 |
+| `Core/Src/gpio.c`、`tim.c`、`stm32u5xx_it.c`、`*_hal_msp.c` | STM32CubeMX 生成 | 时钟与外设初始化，未做修改 |
+| `Drivers/` | ST 官方 | HAL 库与 CMSIS，未做修改 |
+| `MDK-ARM/lulu.uvprojx` | Keil 工程 | 双击可打开编译 |
 
 ## 编译与运行
 
