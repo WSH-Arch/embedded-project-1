@@ -91,6 +91,15 @@ DHT11（温湿度，PA3）  ─┐
 2. 编译前确认已安装 STM32F4xx 器件支持包
 3. 连接 ST-Link / J-Link 下载程序
 4. USART1 接 USB-TTL 可在串口助手中查看调试输出（printf 重定向）
+## 代码导航
+
+| 目录 / 文件 | 来源 | 说明 |
+|---|---|---|
+| `HARDWARE/` | **本人编写** | DHT11 单总线、软件 I2C、OLED、AT24C02、W25Q64、ADC、PWM、串口/DMA、EXTI 中断 |
+| `USER/user.c` | **本人编写** | 主程序与各模块联调流程 |
+| `SYSTEM/` | 通用基础库 | 微秒/毫秒延时与位操作 |
+| `FWLIB/` `CORE/` `USER/stm32f4xx.h` | ST 官方 | STM32F4xx 标准外设库与内核文件，未做修改 |
+| `USER/Smart_AGR.uvprojx` | Keil 工程 | 双击可打开编译 |
 
 ## 调试记录
 
