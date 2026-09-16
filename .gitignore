@@ -1,0 +1,6 @@
+# Keil / MDK build output
+Objects/ Listings/ OBJ/ DebugConfig/ RTE/ *.o *.d *.crf *.dep *.axf *.map *.lst *.htm *.hex *.lnp *.sct *.iex *.build_log.htm
+# IDE / local user files
+*.uvguix* *.PC *.bak *.zip *.7z JLinkLog.txt
+# OS
+Thumbs.db .DS_Store
